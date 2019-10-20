@@ -3,7 +3,7 @@ $Folders = Import-Csv "c:\org_vcenter\ambiente.csv" # Substitua pelo seu local
  
 Foreach($Folder in $Folders){
     $namefolder     = $Folder.NomeDaPasta
-    $path = "c:\org_vcenter\org\>" #substitua pelo seu local
+    $path = "c:\org_vcenter\org\" #substitua pelo seu local
     $pathfolder = "$path\$namefolder"
     $pathfile = "$path\$namefolder\$namefolder.tf"
     $valuefolder = "module `"folder`" {`nsource = `"../../modules/folder`" `n`parent_folder = `"$namefolder`"`n}"
